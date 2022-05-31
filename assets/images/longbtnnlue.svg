@@ -1,0 +1,20 @@
+<svg width="279" height="72" viewBox="0 0 279 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="paint0_linear_2_22" x1="139.5" y1="0" x2="139.5" y2="72" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#149AA0"/>
+            <stop offset="0.234791" stop-color="#25FEFB"/>
+            <stop offset="0.614583" stop-color="#018486"/>
+            <stop offset="0.836983" stop-color="#028587"/>
+            <stop offset="1" stop-color="#65E0E7"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_2_22" x1="139.5" y1="0" x2="139.5" y2="72" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#ACC4CE"/>
+            <stop offset="0.0001" stop-color="#ACC4CE"/>
+            <stop offset="0.494792" stop-color="#1C647C"/>
+            <stop offset="1" stop-color="#100B2C"/>
+            <stop offset="1" stop-color="#100B2C"/>
+        </linearGradient>
+    </defs>
+    <path d="M0 0H279V72H0V0Z" fill="url(#paint0_linear_2_22)"/>
+<path d="M0 0V-4H-4V0H0ZM279 0H283V-4H279V0ZM279 72V76H283V72H279ZM0 72H-4V76H0V72ZM0 4H279V-4H0V4ZM275 0V72H283V0H275ZM279 68H0V76H279V68ZM4 72V0H-4V72H4Z" fill="url(#paint1_linear_2_22)"/>
+</svg>
