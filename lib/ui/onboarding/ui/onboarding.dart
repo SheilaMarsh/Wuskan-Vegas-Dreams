@@ -29,10 +29,16 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [Color(0xFF142850), Color(0xFF253B6E)]),
+                    colors: [
+                      Color(0xFF142850),
+                      Color(0xFF253B6E),
+                    ],
+                ),
                 image: DecorationImage(
                     image: AssetImage('assets/images/${Hive.box<UserModel>('user').values.first.activeBg}.png'),
-                    fit: BoxFit.fill)),
+                    fit: BoxFit.fill,
+                ),
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -138,6 +144,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 48.w),
                   child: InkWell(
                     onTap: () async {
+                      purchase().then((value) => subscribed=value);
                       Navigator.pushNamed(context, MainNavigationRoutes.main);
                     },
                     child: Container(
@@ -180,10 +187,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                       ),
                       InkWell(
-                        onTap: () async {
-                          purchase().then((value) => subscribed=value);
-                          Navigator.pop(context);
-                        },
+                        onTap: ()=>restore().then((value) => value ? Navigator.pop(context) : null),
                         child: Text(
                           'Restore',
                           style: TextStyle(
@@ -194,7 +198,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         ),
                       ),
                       InkWell(
-                        onTap: () => restore(),
+                        onTap: () => openPrivacyPolicy(),
                         child: Text(
                           'Privacy Policy',
                           style: TextStyle(
